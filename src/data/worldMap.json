@@ -1,0 +1,37 @@
+[
+  {
+    "id": "entrada",
+    "nombre": "Entrada de la Cueva",
+    "descripcion": "Un arco de piedra antiguo cubierto de musgo marca la entrada a las profundidades. El aire es gélido y el eco de gotas resuena en la oscuridad.",
+    "direcciones": { "norte": "pasillo", "sur": null, "este": null, "oeste": null },
+    "emoji": "🏔️"
+  },
+  {
+    "id": "pasillo",
+    "nombre": "Pasillo de las Sombras",
+    "descripcion": "Un pasillo largo donde antorchas titilantes proyectan sombras danzantes. Puertas misteriosas se abren a cada lado, y el suelo cruje bajo tus pies.",
+    "direcciones": { "norte": "trono", "sur": "entrada", "este": "biblioteca", "oeste": "celda" },
+    "emoji": "🕯️"
+  },
+  {
+    "id": "biblioteca",
+    "nombre": "Gran Biblioteca",
+    "descripcion": "Miles de libros polvorientos llenan las paredes hasta el techo. Un aroma a pergamino antiguo flota en el aire, y una mesa con un grimorio abierto espera en el centro.",
+    "direcciones": { "norte": null, "sur": null, "este": null, "oeste": "pasillo" },
+    "emoji": "📚"
+  },
+  {
+    "id": "celda",
+    "nombre": "Celda Olvidada",
+    "descripcion": "Una habitación pequeña y húmeda con marcas de garras en las paredes de piedra. Cadenas oxidadas cuelgan del techo y un débil brillo emana del suelo.",
+    "direcciones": { "norte": null, "sur": null, "este": "pasillo", "oeste": null },
+    "emoji": "⛓️"
+  },
+  {
+    "id": "trono",
+    "nombre": "Salón del Trono",
+    "descripcion": "Un salón majestuoso iluminado por candelabros mágicos. Un trono de hueso y obsidiana preside la estancia, rodeado de estandartes rasgados por el tiempo.",
+    "direcciones": { "norte": null, "sur": "pasillo", "este": null, "oeste": null },
+    "emoji": "👑"
+  }
+]

@@ -1,0 +1,276 @@
+@import "tailwindcss";
+
+/* ========================================
+   CSS Variables — Tema Pergamino (Claro)
+   ======================================== */
+:root {
+  /* Backgrounds */
+  --color-bg-primary: #f5e6c8;
+  --color-bg-secondary: #ede0c8;
+  --color-bg-card: #faf3e0;
+  --color-bg-navbar: rgba(139, 90, 43, 0.95);
+  --color-bg-input: #fff8ee;
+  --color-bg-hover: #e8d5b0;
+  --color-bg-disabled: #d4c5a9;
+  --color-bg-highlight: #fff3cd;
+
+  /* Text */
+  --color-text-primary: #2c1810;
+  --color-text-secondary: #5a3e2b;
+  --color-text-muted: #8b7355;
+  --color-text-navbar: #faf3e0;
+  --color-text-accent: #8b4513;
+  --color-text-on-button: #faf3e0;
+
+  /* Accents & Borders */
+  --color-accent: #b8860b;
+  --color-accent-hover: #d4a017;
+  --color-border: #c4a882;
+  --color-border-highlight: #daa520;
+  --color-border-card: #d4b896;
+
+  /* Buttons */
+  --color-btn-primary: #8b4513;
+  --color-btn-primary-hover: #a0522d;
+  --color-btn-danger: #8b0000;
+  --color-btn-danger-hover: #a52a2a;
+  --color-btn-disabled: #c4a882;
+
+  /* Shadows */
+  --shadow-card: 0 4px 6px -1px rgba(139, 90, 43, 0.15), 0 2px 4px -2px rgba(139, 90, 43, 0.1);
+  --shadow-navbar: 0 4px 12px rgba(44, 24, 16, 0.3);
+  --shadow-glow: 0 0 15px rgba(218, 165, 32, 0.3);
+
+  /* Fonts */
+  --font-heading: 'Cinzel', serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Transitions */
+  --transition-base: 0.3s ease;
+}
+
+/* ========================================
+   CSS Variables — Tema Calabozo (Oscuro)
+   ======================================== */
+.dark {
+  --color-bg-primary: #1a1a2e;
+  --color-bg-secondary: #16213e;
+  --color-bg-card: #0f3460;
+  --color-bg-navbar: rgba(10, 10, 30, 0.95);
+  --color-bg-input: #1a1a3e;
+  --color-bg-hover: #1f2b4d;
+  --color-bg-disabled: #2a2a4a;
+  --color-bg-highlight: #1a3a5c;
+
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #b0b0c8;
+  --color-text-muted: #7878a0;
+  --color-text-navbar: #e0d0ff;
+  --color-text-accent: #a78bfa;
+  --color-text-on-button: #e0e0e0;
+
+  --color-accent: #7c3aed;
+  --color-accent-hover: #8b5cf6;
+  --color-border: #3a3a5c;
+  --color-border-highlight: #7c3aed;
+  --color-border-card: #2a2a4a;
+
+  --color-btn-primary: #6d28d9;
+  --color-btn-primary-hover: #7c3aed;
+  --color-btn-danger: #991b1b;
+  --color-btn-danger-hover: #b91c1c;
+  --color-btn-disabled: #3a3a5c;
+
+  --shadow-card: 0 4px 6px -1px rgba(124, 58, 237, 0.15), 0 2px 4px -2px rgba(124, 58, 237, 0.1);
+  --shadow-navbar: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-glow: 0 0 20px rgba(124, 58, 237, 0.4);
+}
+
+/* ========================================
+   Global Styles
+   ======================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  transition: background-color var(--transition-base), color var(--transition-base);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+}
+
+/* ========================================
+   Scrollbar Styling
+   ======================================== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+/* ========================================
+   Animations
+   ======================================== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: var(--shadow-glow); }
+  50% { box-shadow: 0 0 30px rgba(218, 165, 32, 0.5); }
+}
+
+.dark .pulse-glow-anim {
+  animation: pulse-glow-dark 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow-dark {
+  0%, 100% { box-shadow: var(--shadow-glow); }
+  50% { box-shadow: 0 0 30px rgba(124, 58, 237, 0.6); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes torch-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slideInUp 0.6s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-torch {
+  animation: torch-flicker 1.5s ease-in-out infinite;
+}
+
+.pulse-glow-anim {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+/* ========================================
+   Utility Classes
+   ======================================== */
+.page-container {
+  min-height: calc(100vh - 72px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+.card {
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-card);
+  border-radius: 12px;
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-2px);
+}
+
+.btn {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary {
+  background-color: var(--color-btn-primary);
+  color: var(--color-text-on-button);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-btn-primary-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  background-color: var(--color-btn-disabled);
+  color: var(--color-text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+  opacity: 0.6;
+}
+
+.input-field {
+  font-family: var(--font-body);
+  background-color: var(--color-bg-input);
+  color: var(--color-text-primary);
+  border: 2px solid var(--color-border);
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all var(--transition-base);
+  width: 100%;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(218, 165, 32, 0.15);
+}
+
+.dark .input-field:focus {
+  box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+}
+
+.input-field::placeholder {
+  color: var(--color-text-muted);
+}
