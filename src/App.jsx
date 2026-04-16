@@ -4,6 +4,8 @@ import ProtectedRoute from './components/ProtectedRoute';
 import Home from './pages/Home';
 import Game from './pages/Game';
 import MapView from './pages/MapView';
+import Stats from './pages/Stats';
+import NotFound from './pages/NotFound';
 
 export default function App() {
   return (
@@ -17,7 +19,11 @@ export default function App() {
           <Route element={<ProtectedRoute />}>
             <Route path="/game" element={<Game />} />
             <Route path="/map" element={<MapView />} />
+            <Route path="/stats" element={<Stats />} />
           </Route>
+
+          {/* Fallback: 404 */}
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
