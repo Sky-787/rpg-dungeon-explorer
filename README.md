@@ -1,3 +1,5 @@
+![RPG Dungeon Explorer Banner](./banner.png)
+
 # 🐉 RPG Dungeon Explorer
 
 ¡Bienvenido a **RPG Dungeon Explorer**! Una aventura épica de exploración de mazmorras construida con las tecnologías web más modernas. Este proyecto sumerge al jugador en una serie de salas misteriosas donde la navegación, la estrategia y el descubrimiento son la clave.
