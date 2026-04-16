@@ -2,60 +2,51 @@
 
 # 🐉 RPG Dungeon Explorer
 
-¡Bienvenido a **RPG Dungeon Explorer**! Una aventura épica de exploración de mazmorras construida con las tecnologías web más modernas. Este proyecto sumerge al jugador en una serie de salas misteriosas donde la navegación, la estrategia y el descubrimiento son la clave.
+**RPG Dungeon Explorer** es una aplicación web de aventura y exploración de mazmorras diseñada con un enfoque en la experiencia de usuario inmersiva y una arquitectura técnica moderna. El proyecto permite a los jugadores adentrarse en un mundo dinámico de fantasía, rastrear su progreso y descubrir secretos ocultos mediante una interfaz intuitiva y visualmente impactante.
 
-## 🚀 Tecnologías Utilizadas
+## 🕹️ Funcionalidades del Juego
 
-Este proyecto hace uso de un stack tecnológico de vanguardia para garantizar rendimiento y una experiencia de usuario fluida:
+El proyecto integra múltiples sistemas para ofrecer una experiencia de juego completa:
 
-- **React 19**: Biblioteca principal para la interfaz de usuario.
-- **Vite**: Herramienta de construcción para un entorno de desarrollo ultrarrápido.
-- **Zustand 5**: Gestión de estado global simplificada y eficiente.
-- **React Router 7**: Manejo de rutas y navegación entre páginas.
-- **Tailwind CSS 4**: Estilizado moderno con un enfoque en diseño premium y responsivo.
+- **Sistema de Exploración Interactiva**: Navegación fluida entre salas mediante un compás direccional (Norte, Sur, Este, Oeste). Las conexiones entre salas son dinámicas y dependen de la lógica interna del mapa.
+- **Bitácora de Movimiento**: Un registro en tiempo real que muestra los últimos 10 pasos del jugador, incluyendo el nombre de la sala, su emoji representativo y la hora exacta del movimiento.
+- **Mapa Dinámico y Visual**: Una vista completa de la mazmorra que destaca la ubicación actual del héroe y muestra la información de cada sala de forma organizada.
+- **Panel de Estadísticas Avanzado**: Una sección dedicada al seguimiento del progreso del jugador que incluye:
+    - **Contador de pasos totales**: Mide la actividad del aventurero.
+    - **Progreso de exploración**: Una barra dinámica que calcula el porcentaje de salas descubiertas.
+    - **Registro de Descubrimientos**: Una cuadrícula visual que diferencia las salas visitadas de las desconocidas.
 
-## ✨ Características Principales
+## 🛠️ Arquitectura y Tecnologías
 
-- **Exploración Dinámica**: Sistema de movimiento basado en brújula (Norte, Sur, Este, Oeste).
-- **Mundo Basado en Datos**: Las salas y conexiones se gestionan dinámicamente desde un archivo `worldMap.json`.
-- **Modo Oscuro/Claro**: Soporte para "Modo Calabozo" (Oscuro) y "Modo Pergamino" (Claro).
-- **Página 404 Temática**: Una "Sala Extraviada" personalizada para rutas inexistentes.
+El proyecto está construido bajo los más altos estándares de desarrollo web actual:
 
-## 🛠️ Mejoras e Implementaciones (Contribuciones)
+- **React 19 & Vite**: Para una interfaz reactiva, modular y un rendimiento de carga optimizado.
+- **Manejo de Estado con Zustand 5**: Gestión centralizada de los datos del jugador (nombre, posición e historial) que permite una persistencia lógica durante la sesión de juego.
+- **Navegación con React Router 7**: Sistema de rutas robusto que incluye protección de rutas (requiere nombre de jugador para entrar a la mazmorra) y una **página 404 personalizada** integrada en la temática del juego.
+- **Diseño Premium con Tailwind CSS 4**: 
+    - Uso de **Glassmorphism** para tarjetas y paneles traslúcidos.
+    - Sistema de temas (Claro/Oscuro) adaptado a la narrativa (Modo Pergamino y Modo Calabozo).
+    - Animaciones suaves (`animate-fade-in`, `animate-slide-up`, `animate-room-change`) que mejoran la inmersión del usuario.
+- **Componentización**: Estructura de código limpia con componentes reutilizables como `RoomCard` y `DirectionButton`, facilitando la mantenibilidad y escalabilidad del mapa.
 
-Para esta fase del proyecto, se han implementado una serie de mejoras críticas que elevan la calidad del software:
+## 📦 Instalación y Ejecución
 
-### 🟢 Nivel Fácil
-- **Componente RoomCard**: Refactorización de la lógica de visualización de salas en un componente atómico y reutilizable.
-- **Footer Premium**: Un pie de página detallado con animaciones y créditos del proyecto.
-- **Refinamiento de Estilos**: Ajustes de espaciado, tipografía (Outfit) y colores en toda la aplicación.
+Para ejecutar este proyecto en tu entorno local, sigue estos pasos:
 
-### 🟡 Nivel Medio
-- **Historial de Movimientos**: Implementación en tiempo real de los últimos 10 pasos dados por el jugador, registrando sala, emoji y hora.
-- **Navegación Robusta**: Integración total de la página 404 personalizada en el sistema de rutas.
-- **Animaciones de Transición**: Efectos visuales suaves al cambiar de sala para mejorar la inmersión.
-
-### 🔴 Nivel Avanzado
-- **Dashboard de Estadísticas**: Nueva página `/stats` que calcula y muestra automáticamente:
-    - Total de pasos dados.
-    - Porcentaje de exploración de la mazmorra.
-    - **Bitácora de Viaje**: Una interfaz visual que muestra qué salas han sido descubiertas y cuáles permanecen en las sombras.
-- **Estética "Rich Aesthetics"**: Implementación de efectos de **Glassmorphism**, sombras de profundidad y gradientes dinámicos en toda la interfaz.
-
-## 📦 Instalación y Uso
-
-1.  Clona el repositorio.
-2.  Instala las dependencias:
+1.  **Clonación del repositorio**:
+    ```bash
+    git clone [url-del-repositorio]
+    ```
+2.  **Instalación de dependencias**:
     ```bash
     npm install
     ```
-3.  Inicia el servidor de desarrollo:
+3.  **Lanzamiento del servidor de desarrollo**:
     ```bash
     npm run dev
     ```
-4.  Abre tu navegador en `http://localhost:5173`.
+4.  **Acceso web**: Abre tu navegador en `http://localhost:5173`.
 
 ---
 
-**Proyecto desarrollado como parte de la asignatura de Electiva de Software.**
-🐉 *Explora, Descubre, Sobrevive.*
+**Explora, descubre y sobrevive en las profundidades de la mazmorra.** ⚔️📜
