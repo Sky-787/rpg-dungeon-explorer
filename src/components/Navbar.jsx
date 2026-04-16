@@ -11,6 +11,7 @@ export default function Navbar() {
     { to: '/', label: 'Inicio', icon: '🏠' },
     { to: '/game', label: 'Explorar', icon: '⚔️' },
     { to: '/map', label: 'Mapa', icon: '🗺️' },
+    { to: '/stats', label: 'Stats', icon: '📊' },
   ];
 
   const isActive = (path) => location.pathname === path;
